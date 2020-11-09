@@ -24,7 +24,19 @@ var loadData = [
     {name:"item5",path:"images/game/item5.png"},
     {name:"item6",path:"images/game/item6.png"},
     {name:"item7",path:"images/game/item7.png"},
-    {name:"hintbg",path:"images/game/hintbg.png"}
+    {name:"item8",path:"images/game/item8.png"},
+    {name:"item9",path:"images/game/item9.png"},
+    {name:"item10",path:"images/game/item10.png"},
+    {name:"item11",path:"images/game/item11.png"},
+    {name:"item12",path:"images/game/item12.png"},
+    {name:"item13",path:"images/game/item13.png"},
+    {name:"item14",path:"images/game/item14.png"},
+    // 后面是炸弹
+    {name:"item15",path:"images/game/item15.png"},
+    {name:"item16",path:"images/game/item15.png"},
+    {name:"item17",path:"images/game/item15.png"},
+    {name:"item18",path:"images/game/item15.png"},
+    {name:"hintbg",path:"images/game/hintbg.jpg"}
 ];
 var point=0;
 var imglist;
@@ -191,21 +203,22 @@ function gameOver(){
     itemLayer.removeAllChild();
 
     //提交游戏得分
-    postto();
-    function postto(){
-        $.ajax({
-            type: 'POST',
-            url: result_url,//AJAX请求地址服务器
-            data:  { friend: '',point:point },//friend:空值为自己玩，有值为帮朋友玩（值就是朋友的微信ID）
-            success: function(msg){
-                alert( msg );
-            },
-            error: function() {
-                var r=confirm('提交失败!请确认是否重新提交？');
-                if (r==true){postto();}else{window.location.href="活动首页index.html"}
-            }
-        });
-    }
+    // postto();
+    // function postto(){
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: result_url,//AJAX请求地址服务器
+    //         data:  { friend: '',point:point },//friend:空值为自己玩，有值为帮朋友玩（值就是朋友的微信ID）
+    //         success: function(msg){
+    //             alert( msg );
+    //         },
+    //         error: function() {
+    //             var r=confirm('提交失败!请确认是否重新提交？');
+    //             if (r==true){postto();}else{window.location.href="活动首页index.html"}
+    //         }
+    //     });
+    // }
+    alert('您的得分为: ' + point);
 }
 
 
@@ -266,8 +279,8 @@ function Item(){
     base(this,LSprite,[]);
     var self = this;
     self.mode="";
-    var index = Math.floor(Math.random()*8);
-    self.value = index < 6 ? 1:-1;
+    var index = Math.floor(Math.random()*19);
+    self.value = index < 15 ? 1:-1;
     var bitmap = new LBitmap(new LBitmapData(imglist["item"+index]));
     self.addChild(bitmap);
 }
@@ -312,7 +325,7 @@ init(10,"game",640,1000,main);
  * Game contraller script 
  */
 var MG_Game_Contraller = {
-    name : '米缸 邀请基友捡钱啦',
+    name : '光盘行动',
     verson : '20150630',
     loading : function(){
         var that = this;

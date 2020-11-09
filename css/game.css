@@ -2,7 +2,7 @@
 
 body{font-family:\5FAE\8F6F\96C5\9ED1,Arial;width:100%;height:100%;margin:0px;padding:0px;background:#d82015;}
 a:active,a:visited{ color: #fff;}
-.main{ position: absolute; width: 100%; height: 100%; background: url("../images/mg_back.png");background-size: 100% 100%; }
+.main{ position: absolute; width: 100%; height: 100%; background: url("../images/game/hintbg.jpg");background-size: 100% 100%; }
 .resultbg{ background: url("../images/resultbg.png");background-size: 100% 100%;  }
 .toplist{position:absolute; top:15px; left:15px; display: block; border:solid 2px #fff; text-align:center;padding:3px 10px; color:#fff;font-size:14px; text-decoration: none; z-index: 9;}
 .rule{position:absolute; top:15px; right:15px; display: block; border:solid 2px #fff; text-align:center;padding:3px 10px; color:#fff;font-size:14px; text-decoration: none; z-index: 9;}
@@ -25,7 +25,8 @@ a:active,a:visited{ color: #fff;}
 .back{ display: block; border:solid 2px #fff; text-align:center;padding:6px 10px; color:#fff;font-size:14px; text-decoration: none;  width: 80px; margin: 20px auto}
 
 /*游戏界面*/
-#load{width:244px;height:300px;background:url(../images/mg_load.png) no-repeat center center;position:absolute;left:50%;margin-left:-122px;top:50%;margin-top:-160px;background-size:60%;color:#fff;font-size:1.2em;}
+/*#load{width:244px;height:300px;background:url(../images/mg_load.png) no-repeat center center;position:absolute;left:50%;margin-left:-122px;top:50%;margin-top:-160px;background-size:60%;color:#fff;font-size:1.2em;}*/
+#load{width:244px;height:300px;position:absolute;left:50%;margin-left:-122px;top:50%;margin-top:-160px;background-size:60%;color:#fff;font-size:1.2em;}
 #counter{position:absolute;left:0em;z-index:2;width:100%;text-align:center;}
 .load-bar {width: 120px;height: 25px;border-radius: 30px;background: #c4382e;position:absolute;bottom: 0px;box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8),  inset 0 2px 3px rgba(0, 0, 0, 0.2);text-align:center;left:50%;margin-left:-60px;}
 .load-bar-inner {
