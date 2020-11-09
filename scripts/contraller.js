@@ -42,7 +42,7 @@ var point=0;
 var imglist;
 var backLayer,playerLayer,itemLayer,overLayer,startLayer,hintLayer;
 var hero;
-var step=50,stepindex=0;
+var step=150,stepindex=0;
 var pointTxt;
 var seconds = '30s',secondsTxt;
 var miao = 3,miaoTxt;
@@ -100,7 +100,7 @@ function gameInit(result){
                 miaoTxt.die();
                 //启动
                 addEvent();
-                miao = 3;
+                miao = '';
                 gotoplay();
                 return false;
             }
@@ -286,7 +286,7 @@ function Item(){
 }
 Item.prototype.run=function(){
     var self=this;
-    self.y += 10;
+    self.y += 5;
     var hit = self.checkHit();
     if(hit || self.y > LGlobal.height){
         self.mode="die";
