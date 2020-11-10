@@ -36,7 +36,7 @@ var loadData = [
     {name:"item16",path:"images/game/item15.png"},
     {name:"item17",path:"images/game/item15.png"},
     {name:"item18",path:"images/game/item15.png"},
-    {name:"hintbg",path:"images/game/hintbg.jpg"}
+    {name:"hintbg",path:"images/game/hintbg.png"}
 ];
 var point=0;
 var imglist;

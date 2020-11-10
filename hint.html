@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #fff;
+      }
+
+      .container {
+        width: 320px;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.35);
+        position: relative;
+      }
+      .hint {
+        font-size: 16px;
+        color: #fff;
+        position: absolute;
+      }
+      .hint-good {
+        top: 80px;
+        right: 50px;
+      }
+
+      .hint-bad {
+        top: 230px;
+        left: 50px;
+      }
+
+      .boom {
+        width: 50px;
+        height: 50px;
+        background: url('./images/game/item15.png') no-repeat 100% 100%;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 240px;
+        right: 50px;
+      }
+
+      .vegetables {
+        width: 50px;
+        height: 50px;
+        background: url('./images/game/item5.png') no-repeat 100% 100%;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 90px;
+        left: 50px;
+      }
+
+      .line {
+        width: 90px;
+        height: 8px;
+        border: 1px solid #fff;
+        border-radius: 50% 50% 0 0/100% 100% 0 0;
+        border-bottom: none;
+      }
+
+      .line1 {
+        position: absolute;
+        top: 90px;
+        left: 46%;
+        transform: translate(-50%) rotate(-10deg);
+      }
+
+      .line2 {
+        position: absolute;
+        top: 240px;
+        left: 52%;
+        transform: translate(-50%) rotate(10deg);
+      }
+
+      .score {
+        font-weight: bold;
+        font-size: 38px;
+        position: absolute;
+      }
+
+      .plus {
+        color: rgb(244, 67, 54);
+        top: 55px;
+        left: 52px;
+      }
+
+      .minus {
+        color: rgb(102, 160, 48);
+        top: 205px;
+        right: 66px;
+      }
+
+      .btn {
+        color: #fff;
+        font-size: 18px;
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: rgb(244, 67, 54);
+        border-radius: 8px;
+
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hint hint-good">
+        接到蔬菜
+        <br />
+        获得1分
+      </div>
+
+      <div class="hint hint-bad">
+        接到炸弹
+        <br />
+        扣除1分
+      </div>
+
+      <div class="line1 line"></div>
+      <div class="line2 line"></div>
+
+      <div class="boom"></div>
+
+      <div class="plus score">+1</div>
+      <div class="minus score">-1</div>
+
+      <div class="vegetables"></div>
+
+      <div class="btn">知道啦</div>
+    </div>
+  </body>
+</html>
